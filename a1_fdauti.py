@@ -5,10 +5,10 @@
     Please personlize the following author declaration:
 -----------------------------------------------------------------------
 OPS435 Assignment 1 - Winter 2021
-Program: a1_[Seneca_name].py (replace [Seneca_name] with your Seneca User name)
-Author: "Student Name"
-The python code in this file (a1_[Seneca_name].py) is original work written by
-"Student Name". No code in this file is copied from any other source 
+Program: a1_fdauti.py
+Author: "Fatjon Dauti"
+The python code in this file (a1_fdauti.py) is original work written by
+"Fatjon Dauti". No code in this file is copied from any other source 
 except those provided by the course instructor, including any person, 
 textbook, or on-line resource. I have not shared this python script 
 with anyone or anything except for submission for grading.  
