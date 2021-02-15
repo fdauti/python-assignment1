@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-''' template for ops435 assignment 1 script
-    put your script level docstring here...
-    you can have more than one line of docstring.
-    Please personlize the following author declaration:
+''' The purpose of this program is to take as input data, a date of birth, 
+    convert it in a specific format and display the result in standard output.
+    The program will accept user input in the following formats, 
+    (YYYYMMDD, YYYY/MM/DD, YYYY-MM-DD, or YYYY.MM.DD)
+    The result should be displayed on standard output in the "mmm d, yyyy" format. 
 -----------------------------------------------------------------------
 OPS435 Assignment 1 - Winter 2021
-Program: a1_fdauti.py
+Program: a1_fdauti.py 
 Author: "Fatjon Dauti"
 The python code in this file (a1_fdauti.py) is original work written by
 "Fatjon Dauti". No code in this file is copied from any other source 
