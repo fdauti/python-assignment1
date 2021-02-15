@@ -1,3 +1,56 @@
-Algorithm for Assignment 1
+Algorithm for Assignment 1 - Fatjon Dauti
 
+The purpose of this program is to take as input data, a date of birth (in 4 specified formats), convert it in a specific format and display the result in standard output. The use of functions is recommended whenever possible. The program will only make use of the "sys" and "os" modules. The algorithm for writing this program is divided in 3 stages and 8 steps as described below. 
+
+#Input stage
+Take as input data, a date of birth as a string in the following formats (either YYYYMMDD, YYYY/MM/DD, YYYY-MM-DD, or YYYY.MM.DD). Specify to the user the correct input format and remind user how to use the program, if data in wrong format is inputed. 
+
+Step 1
+Check to see if the user is entering a single data input. If the user is entering nothing, 2 or more arguments on the console, the program will remind the user how to enter data in the required format, then the program will exit.
+
+Step 2
+Define 3 variables to process the input data. First variable "month_name" is a list of strings with all the months in mmm format (Jan to Dec). Second variable "days_in_month" is a dictionary with the key being the month number (1 to 12) and the value being the number of days in each month, with the second month (Feb) having 28 days. Third variable is "user_raw_data", the user input from the console.
+
+#Processing (input validation) stage
+In this stage the program will make sure that the user input data is formatted correctly before sent to standard output
+ 
+Step 3
+Create a string variable "allow_chars" with all allowed characters (0 to 9), to check against the user's input.
+Remove all the non-digits characters ‘/’, ‘-’, ‘.’ from the user's input data, to extract the year, month, and day.
+
+Step 4
+Check if the size of the extracted input data is 8, if the size is different than 8 characters, exit program reminding the user that wrong data was entered. 
+
+Step 5
+Create 3 variables to distribute the 8 characters from the user input, in integer format. First variable "year" will hold the first 4 digits, second variable "month" will hold the the 5th and 6th digit, last variable "day" will hold the remaining digits.
+
+Step 6
+Validate the correct range for each of the variables in step 5.
+Check the range of the "year" variable, if it is outside of the allowed range (1900 to 9999), exit program reminding user of the accepted range.
+Check the range of the "month" variable, if it is outside of the allowed range (1 to 12), remind user of the accepted range and exit program. 
+Check to see if the year entered is a leap year, if it is a leap year, assign to the second key (Feb month) of the variable "days_in_month" the value of 29, to reflect this, before proceeding to check the range.
+Check the range of the "day" variable, if it is outside of the range of days for the specified month, remind user of the error and exit program.
+
+#Output stage
+Display correct data on standard output in the required "mmm d, yyyy" format.
+
+Step 7
+Define a new string variable "new_dob" (new date of birth), to hold the result to be displayed to the standard output.
+The "new_dob" variable will display a 2 digit month instead of a three letter name for the given month, by referring to the right index of the item on the "month_name" list. Rearrange the year, month, and day into the required format "mmm d, yyyy" by concatenating the data in the correct order.
+
+Step 8
+Print the "new_dob" variable to standard output.
+
+
+#Functions to use inside the program for completing the steps above
+
+In step 1, a "usage()" function should be defined to return a string to be displayed on standard output, as a help message to remind the user of the correct usage of the program, when other then 1 argument is entered as input data. To make it easier, we could remind the user to input data as either YYYYMMDD, YYYY/MM/DD, YYYY-MM-DD, or YYYY.MM.DD format. 
+
+In step 3, a "sanitize(obj1,obj2)" function should be defined to return all the valid characters entered by the user. The function will remove all non-digits characters. We can pass 2 parameters to this function, the first parameter being the input user data "user_raw_data", the second parameter the "allow_chars" string of allowed characters. The function will return a new string will all "user_raw_data" characters that are part of "allow_chars", extracted in their original order.
+
+In step 4, a "size_check(obj, intobj)" function should be defined to check if the size of the string returned in step 3 is 8 characters. This function will accept 2 parameters, the first parameter is sanitized input data from step 3, the second parameter is the integer value of 8, the required length of characters in the sanitized string. Based on the comparison, the function will return a boolean value that will be assigned to a new variable (result). 
+
+In step 6, a "range_check(obj1, obj2)" function should be defined to validate the correct ranges of the variables of step 5. This function will accept 2 arguments passed as parameters, the first one is one of the variables from step 5 (year, month or day), the second one is a tuple with the correct range for that variable. The function will return a boolean value of True or False, depending if the variable is or is not in the specified range. 
+
+In step 6, a leap_year(obj) function should be defined to handle leap years. This function will accept one parameter (the year entered by the user) and should calculate if is year is a leap year, and return a boolean value of True if the year is a leap year.  
 
