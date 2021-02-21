@@ -20,7 +20,7 @@ import os
 import sys
 
 def leap_year(obj):
-    '''Check to see if the year entered by the user is a leap year.'''
+    '''Check to see if the year entered by the user is a leap year'''
     # Leap year algorithm 
     # if (year is not divisible by 4) then (it is a common year)
     # else if (year is not divisible by 100) then (it is a leap year)
@@ -38,9 +38,8 @@ def leap_year(obj):
     return status
 
 def sanitize(obj1,obj2):
-    '''
-    Remove all the non-digits characters ‘/’, ‘-’, ‘.’ from 
-    the user's input data, to extract the year, month, and day.
+    '''Remove all the non-digits characters ‘/’, ‘-’, ‘.’ from 
+       the user's input data, to extract the year, month, and day.
     '''
     results = ''
     for char in obj1:
@@ -49,18 +48,15 @@ def sanitize(obj1,obj2):
     return results
 
 def size_check(obj, intobj):
-    '''
-    Check if the length of the sanitized user input is 8 characters.
-    '''
+    '''Check if the length of the sanitized user input is 8 characters'''
     status = False
     if len(obj) == intobj:
         status = True
     return status
 
 def range_check(obj1, obj2):
-    '''
-    Validate the correct range for the year, month and day variables. 
-    Return a boolean variable depending of the status of the validation
+    '''Validate the correct range for the year, month and day variables. 
+       Return a boolean variable depending of the status of the validation
     '''
     status = False
     r_min = obj2[0]
@@ -70,9 +66,8 @@ def range_check(obj1, obj2):
     return status
     
 def usage():    
-    ''' 
-    Remind the user how to use the script to input data in the correct format, 
-    if something other than a single command line arguemnt is entered.
+    '''Remind the user how to use the script to input data in the correct format, 
+       if something other than a single command line arguemnt is entered.
     '''
     status = "Usage: a1_fdauti.py YYYYMMDD|YYYY/MM/DD|YYYY-MM-DD|YYYY.MM.DD"
     return status
