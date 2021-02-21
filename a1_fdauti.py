@@ -20,15 +20,13 @@ import os
 import sys
 
 def leap_year(obj):
-    '''
-    Check to see if the year entered by the user is a leap year.
-    '''
+    '''Check to see if the year entered by the user is a leap year.'''
     # Leap year algorithm 
     # if (year is not divisible by 4) then (it is a common year)
     # else if (year is not divisible by 100) then (it is a leap year)
     # else if (year is not divisible by 400) then (it is a common year)
     # else (it is a leap year)
-    
+
     status = True
     if (obj % 4) != 0:
         status = False
@@ -41,8 +39,8 @@ def leap_year(obj):
 
 def sanitize(obj1,obj2):
     '''
-    Remove all the non-digits characters ‘/’, ‘-’, ‘.’ from the user's input data, 
-    to extract the year, month, and day.
+    Remove all the non-digits characters ‘/’, ‘-’, ‘.’ from 
+    the user's input data, to extract the year, month, and day.
     '''
     results = ''
     for char in obj1:
