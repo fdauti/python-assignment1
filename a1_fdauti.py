@@ -70,7 +70,7 @@ def usage():
     Remind the user how to use the script to input data in the correct format, 
     if something other than a single command line arguemnt is entered.
     '''
-    status = print("Usage: a1_fdauti.py YYYYMMDD|YYYY/MM/DD|YYYY-MM-DD|YYYY.MM.DD")
+    status = "Usage: a1_fdauti.py YYYYMMDD|YYYY/MM/DD|YYYY-MM-DD|YYYY.MM.DD"
     return status
 
 if __name__ == "__main__":
