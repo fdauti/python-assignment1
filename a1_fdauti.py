@@ -21,41 +21,56 @@ import sys
 
 def leap_year(obj):
     '''
-    put your function level docstring here ...
+    Check to see if the year entered by the user is a leap year.
     '''
-    ...
+    status = True
+    if (obj % 4) != 0:
+        status = False
+    elif (obj % 100) != 0:
+        status = True
+    elif (obj % 400) != 0:
+        status = False
 
     return status
 
 def sanitize(obj1,obj2):
     '''
-    put your function level docstring here ...
+    Remove all the non-digits characters ‘/’, ‘-’, ‘.’ from the user's input data, 
+    to extract the year, month, and day.
     '''
-    ...
-    
+    results = ''
+    for char in obj1:
+        if char in obj2:
+            results += char 
     return results
 
 def size_check(obj, intobj):
     '''
-    put your function level docstring here ..
+    Check if the length of the sanitized user input is 8 characters.
     '''
-    ...
-
+    status = False
+    if len(obj) == intobj:
+        status = True
     return status
 
 def range_check(obj1, obj2):
     '''
-    put your function level docstring here ..
+    Validate the correct range for the year, month and day variables. 
+    Return a boolean variable depending of the status of the validation
     '''
-    ...
-    
+    status = False
+    r_min = obj2[0]
+    r_max = obj2[1]
+    if r_min <= obj1 <= r_max:
+        status = True
     return status
     
 def usage():    
+    ''' 
+    Remind the user how to use the script to input data in the correct format, 
+    if something other than a single command line arguemnt is entered.
     '''
-    put your function level docstring here ...
-    '''
-    ...
+    status = print("Usage: a1_fdauti.py YYYYMMDD|YYYY/MM/DD|YYYY-MM-DD|YYYY.MM.DD")
     return status
 
 if __name__ == "__main__":
