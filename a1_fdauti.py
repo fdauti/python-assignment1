@@ -20,7 +20,10 @@ import os
 import sys
 
 def leap_year(obj):
-    '''Check to see if the year entered by the user is a leap year'''
+    '''Check to see if the year entered by the user is a leap year. This function 
+       will accept one parameter (the int value of the year) and return a 
+       boolean value, depending if the argument passed is a leap year or not.
+    '''
     # https://en.wikipedia.org/wiki/Leap_year#Algorithm
     # if (year is not divisible by 4) then (it is a common year)
     # else if (year is not divisible by 100) then (it is a leap year)
@@ -38,8 +41,10 @@ def leap_year(obj):
     return status
 
 def sanitize(obj1,obj2):
-    '''Remove all the non-digits characters ‘/’, ‘-’, ‘.’ from 
-       the user's input data, to extract the year, month, and day.
+    '''Remove all the non-digits characters ‘/’,‘-’,‘.’ from the user's input data, 
+       to extract the year, month, and day. Function returns a string with all the 
+       valid characters entered by user in their original order. Function accept 2 
+       parameters, the user's input data and the string of allowed characters. 
     '''
     results = ''
     for char in obj1:
@@ -48,15 +53,21 @@ def sanitize(obj1,obj2):
     return results
 
 def size_check(obj, intobj):
-    '''Check if the length of the sanitized user input is 8 characters'''
+    '''Check if the length of the sanitized user input is 8 characters. 
+       Function will accept 2 parameters, the sanitized string input data 
+       and the int value of 8, the required length of the sanitized string. 
+       Based on the comparison, function will return a boolean value.
+    '''
     status = False
     if len(obj) == intobj:
         status = True
     return status
 
 def range_check(obj1, obj2):
-    '''Validate the correct range for the year, month and day variables. 
-       Return a boolean variable depending of the status of the validation
+    '''Validate the correct range for the year, month and day variables. Function will 
+       accept 2 parameters, an int variable (year, month or day), and a tuple with the 
+       correct range for that variable. The function will return a boolean value of 
+       True or False, depending if the variable is or is not in the specified range.
     '''
     status = False
     r_min = obj2[0]
@@ -67,7 +78,9 @@ def range_check(obj1, obj2):
     
 def usage():    
     '''Remind the user how to use the script to input data in the correct format, 
-       if something other than a single command line arguemnt is entered.
+       if something other than a single command line arguemnt is entered by user.
+       Returns a string to be displayed on standard output, as a help message.
+       This function doesn't accept any parameter.
     '''
     status = "Usage: a1_fdauti.py YYYYMMDD|YYYY/MM/DD|YYYY-MM-DD|YYYY.MM.DD"
     return status
