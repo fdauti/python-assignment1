@@ -28,7 +28,7 @@ Step 6
 Validate the correct range for each of the variables in step 5.
 Check the range of the "year" variable, if it is outside of the allowed range (1900 to 9999), exit program reminding user of the accepted range.
 Check the range of the "month" variable, if it is outside of the allowed range (1 to 12), remind user of the accepted range and exit program. 
-Check to see if the year entered is a leap year, if it is a leap year, assign to the second key (Feb month) of the variable "days_in_month" the value of 29, to reflect this, before proceeding to check the range.
+Check to see if the year entered is a leap year using a leapyear algorith, if it is a leap year, assign to the second key (Feb month) of the variable "days_in_month" the value of 29, to reflect this, before proceeding to check the range. 
 Check the range of the "day" variable, if it is outside of the range of days for the specified month, remind user of the error and exit program.
 
 #Output stage
